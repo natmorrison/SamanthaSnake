@@ -17,7 +17,7 @@ def bottom_space(data, space):
 
 def is_snake(data, space):
 	bodies = []
-	for snake in data["board"]["snakes"]]:
+	for snake in data["board"]["snakes"]:
 		for bod in snake['body']:
 			bodies.append( (bod['x'], bod['y']) )
 	return (space in bodies)
