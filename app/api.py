@@ -35,3 +35,8 @@ def is_food(data, space):
 
 def get_head(data):
     return (data['board']['you']['body'][0]['x'], data['board']['you']['body'][0]['y'])
+
+
+def dont_go(directions, direction):
+	directions.remove(direction)
+	return directions
