@@ -16,8 +16,11 @@ def bottom_space(data, space):
 
 
 def is_snake(data, space):
-	snakes = [ [ (s['x'], s['y']) for s in body ] for body in data["board"]["snakes"]["body"] ]
-	return (space in snakes)
+	bodies = []
+	for snake in data["board"]["snakes"]]:
+		for bod in snake['body']:
+			bodies.append( (bod['x'], bod['y']) )
+	return (space in bodies)
 
 
 def is_wall(data, space):
