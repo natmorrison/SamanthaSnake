@@ -86,7 +86,7 @@ def move():
 	leftleft = left_space(data, left)
 	rightright = right_space(data, right)
 	downdown = down_space(data, down)
-	upup= up_space(data, up)
+	upup = up_space(data, up)
 	
 
 	# Don't hit a wall
