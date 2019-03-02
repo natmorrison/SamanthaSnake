@@ -85,8 +85,8 @@ def move():
 	
 	leftleft = left_space(data, left)
 	rightright = right_space(data, right)
-	downdown = down_space(data, down)
-	upup = up_space(data, up)
+	downdown = bottom_space(data, down)
+	upup = top_space(data, up)
 	
 
 	# Don't hit a wall
@@ -123,8 +123,7 @@ def move():
 	
 	# Don't go within 2 spaces of another snakes
 	
-	if directions == []:
-		directions = directionsBeforeTwoSpaceDecision
+
 	
 	if is_snake(data, leftleft):
 		directions = dont_go(directions, LEFT)
@@ -135,7 +134,8 @@ def move():
 	if is_snake(data, upup):
 		directions = dont_go(directions, UP)
 		
-
+	if directions == []:
+		directions = directionsBeforeTwoSpaceDecision
 
 
 
