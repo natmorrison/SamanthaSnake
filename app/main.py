@@ -82,8 +82,6 @@ def move():
 	bottom = bottom_space(data, headmyhead)
 	top = top_space(data, headmyhead)
 
-
-
 	# If one of them is a wall, don't go that direction
 	if is_wall(data, left):
 		directions = dont_go(directions, LEFT)
@@ -93,7 +91,16 @@ def move():
 		directions = dont_go(directions, BOTTOM)
 	if is_wall (data, top):
 		directions = dont_go(directions, TOP)
-
+		
+	if is_snake (data, left):
+		directions = dont_go(directions, LEFT)
+	if is_snake(data, right):
+		directions = dont_go(directions, RIGHT)
+	if is_snake(data, bottom):
+		directions = dont_go(directions, BOTTOM)
+	if is_snake(data, top):
+		directions = dont_go(directions, TOP)
+	
 
 
 
