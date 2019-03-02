@@ -79,8 +79,8 @@ def move():
 	# Get the space to your right, left, up, and down
 	left = left_space(data, headmyhead)
 	right = right_space(data, headmyhead)
-	bottom = bottom_space(data, headmyhead)
-	top = top_space(data, headmyhead)
+	down = bottom_space(data, headmyhead)
+	up = top_space(data, headmyhead)
 
 	# If one of them is a wall, don't go that direction
 	if is_wall(data, left):
