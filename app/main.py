@@ -147,7 +147,10 @@ def move():
 
 	"""
 
-	move = random.choice(directions)
+	if directions != []:
+		move = random.choice(directions)
+	else:
+		move = UP
 
 	return {
 		"move": move
