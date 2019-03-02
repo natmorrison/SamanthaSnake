@@ -74,7 +74,7 @@ def move():
 	#right_of_the_right = right_space(data, right)
 	# right_of_the_right = (5, 2)
 	#if is_wall(data, right_of_the_right):
-		#dont_go(directions, RIGHT)
+		#directions = dont_go(directions, RIGHT)
 	
 	
 	# Get your head
@@ -91,6 +91,12 @@ def move():
 	# If one of them is a wall, don't go that direction
 	if is_wall(data, left):
 		directions = dont_go(directions, LEFT)
+	if is_wall(data, right):
+		directions = dont_go(directions, RIGHT)
+	if is_wall(data, bottom):
+		directions = dont_go(directions, BOTTOM)
+	if is_wall (data, top):
+		directions = dont_go(directions, TOP)
 		
 	
 	
