@@ -1,4 +1,4 @@
-import json
+import json#
 import os
 import random
 import bottle
@@ -26,15 +26,10 @@ def ping():
 
 @bottle.post('/start')
 def start():
-    return HTTPResponse(
-        status=200,
-        headers={
-            "Content-Type": "application/json"
-        },
-        body=json.dumps({
-            "color": "#000000"
-        })
-    )
+    return {
+		"color": '#AA22AA',
+		"taunt": "My first program, go nice"
+	}
 
 @bottle.post('/end')
 def end():
@@ -83,15 +78,9 @@ def move():
 
     move = random.choice(directions)
 
-    return HTTPResponse(
-        status=200,
-        headers={
-            "Content-Type": "application/json"
-        },
-        body=json.dumps({
-            "move": move
-        })
-    )
+    return {
+		"move": move
+	}
 
 
 
