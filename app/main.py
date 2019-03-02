@@ -82,8 +82,14 @@ def move():
 	right = right_space(data, headmyhead)
 	down = bottom_space(data, headmyhead)
 	up = top_space(data, headmyhead)
+	
+	leftleft = left_space(data, left)
+	rightright = right_space(data, right)
+	downdown = down_space(data, down)
+	upup= up_space(data, up)
+	
 
-	# If one of them is a wall, don't go that direction
+	# Don't hit a wall
 	if is_wall(data, left):
 		directions = dont_go(directions, LEFT)
 	if is_wall(data, right):
@@ -92,7 +98,8 @@ def move():
 		directions = dont_go(directions, DOWN)
 	if is_wall (data, up):
 		directions = dont_go(directions, UP)
-		
+	
+	# Don't hit a snake
 	if is_snake (data, left):
 		directions = dont_go(directions, LEFT)
 	if is_snake(data, right):
@@ -102,6 +109,7 @@ def move():
 	if is_snake(data, up):
 		directions = dont_go(directions, UP)
 	
+	# Get yer food boi
 	if is_food(data, left):
 		directions = go(directions, LEFT)
 	if is_food(data, right):
@@ -110,6 +118,14 @@ def move():
 		directions = go(directions, DOWN)
 	if is_food (data, up):
 		directions = go(directions, UP)
+		
+	directionsBeforeTwoSpaceDecision = list(directions)
+	
+	# Don't go within 2 spaces of another snakes
+	
+	if directions == []:
+		directions = directionsBeforeTwoSpaceDecision
+	
 	
 
 
