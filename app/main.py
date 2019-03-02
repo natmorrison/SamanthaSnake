@@ -1,9 +1,9 @@
-import json#
+import json
 import os
 import random
 import bottle
 
-from api import left_space, right_space, top_space, bottom_space, is_snake, is_wall, get_head, dont_go
+from app.api import left_space, right_space, top_space, bottom_space, is_snake, is_wall, get_head, dont_go
 
 LEFT = 'left'
 RIGHT = 'right'
