@@ -132,7 +132,7 @@ def move():
 		directions = dont_go(directions, RIGHT)
 	if is_snake (data, downdown):
 		directions = dont_go(directions, DOWN)
-	if is_snake(data, upup)
+	if is_snake(data, upup):
 		directions = dont_go(directions, UP)
 		
 
