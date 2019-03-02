@@ -32,7 +32,7 @@ def start():
             "Content-Type": "application/json"
         },
         body=json.dumps({
-            "color": "#AA22AA"
+            "color": "#000000"
         })
     )
 
