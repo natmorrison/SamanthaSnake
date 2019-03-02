@@ -34,7 +34,7 @@ def is_food(data, space):
 
 
 def get_head(data):
-	return (data['board']['you']['body'][0]['x'], data['board']['you']['body'][0]['y'])
+	return (data['you']['body'][0]['x'], data['you']['body'][0]['y'])
 
 
 def dont_go(directions, direction):
