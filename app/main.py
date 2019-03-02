@@ -87,19 +87,19 @@ def move():
 		directions = dont_go(directions, LEFT)
 	if is_wall(data, right):
 		directions = dont_go(directions, RIGHT)
-	if is_wall(data, bottom):
-		directions = dont_go(directions, BOTTOM)
-	if is_wall (data, top):
-		directions = dont_go(directions, TOP)
+	if is_wall(data, down):
+		directions = dont_go(directions, DOWN)
+	if is_wall (data, up):
+		directions = dont_go(directions, UP)
 		
 	if is_snake (data, left):
 		directions = dont_go(directions, LEFT)
 	if is_snake(data, right):
 		directions = dont_go(directions, RIGHT)
-	if is_snake(data, bottom):
-		directions = dont_go(directions, BOTTOM)
-	if is_snake(data, top):
-		directions = dont_go(directions, TOP)
+	if is_snake(data, down):
+		directions = dont_go(directions, DOWN)
+	if is_snake(data, up):
+		directions = dont_go(directions, UP)
 	
 
 
