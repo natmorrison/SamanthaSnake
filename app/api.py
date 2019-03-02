@@ -43,3 +43,9 @@ def get_head(data):
 def dont_go(directions, direction):
 	directions.remove(direction)
 	return directions
+
+def go(directions, direction):
+	if direction in directions:
+		return [direction]
+	else:
+		return directions

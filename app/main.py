@@ -59,6 +59,7 @@ def move():
 	is_food(data, space)
 
 	dont_go(directions, direction)
+	go(directions, direction)
 
 	"""
 
@@ -100,6 +101,15 @@ def move():
 		directions = dont_go(directions, DOWN)
 	if is_snake(data, up):
 		directions = dont_go(directions, UP)
+	
+	if is_food(data, left):
+		directions = go(directions, LEFT)
+	if is_food(data, right):
+		directions = go(directions, RIGHT)
+	if is_food(data, down):
+		directions = go(directions, DOWN)
+	if is_food (data, up):
+		directions = go(directions, UP)
 	
 
 
