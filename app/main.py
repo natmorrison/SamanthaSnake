@@ -126,7 +126,15 @@ def move():
 	if directions == []:
 		directions = directionsBeforeTwoSpaceDecision
 	
-	
+	if is_snake(data, leftleft):
+		directions = dont_go(directions, LEFTLEFT)
+	if is_snake (data, rightright):
+		directions = dont_go(directions, RIGHTRIGHT)
+	if is_snake (data, downdown):
+		directions = dont_go(directions DOWNDOWN)
+	if is_snake(data, upup)
+		directions = dont_go(directions UPUP)
+		
 
 
 
